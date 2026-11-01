@@ -84,11 +84,13 @@ tres columnas: identificador, SMILES y desenlace (`Active` / `Inactive`).
 Es la situación de una extrapolación a dengue y hay que decirlo con claridad en cualquier informe: **sin
 conjunto etiquetado no se puede medir generalización**. Las opciones, de mejor a peor:
 
-1. **Transferir θ de una diana homóloga** calibrada con datos reales. Es lo que propone
-   este proyecto: usar `theta_final_v2.json` (calibrado sobre NS1 de influenza) como
-   punto de partida para NS1 de dengue. Supone que las dos proteínas premian el mismo
-   tipo de parecido farmacofórico — una hipótesis razonable entre homólogas, pero una
-   hipótesis.
+1. **Transferir θ de otra diana de la misma clase** calibrada con datos reales. Es lo que
+   propone este proyecto: usar `theta_final_v2.json` (calibrado sobre NS1 de influenza)
+   como punto de partida para NS1 de dengue. Supone que las dos proteínas premian el mismo
+   tipo de parecido farmacofórico, y ojo: **no son homólogas**, así que ese supuesto es más
+   fuerte de lo que parece. Es un punto de partida razonable a falta de datos, no un
+   resultado. Conviene reportar en paralelo el ranking con θ sin calibrar, para que se vea
+   cuánto depende de la transferencia.
 2. **Construir decoys presuntos** con `construir_decoys_reales` (criterio tipo DUD‑E:
    peso molecular parecido, Tanimoto bajo) y calibrar contra ellos. El AUC resultante es
    optimista, porque los "inactivos" nunca se midieron.
