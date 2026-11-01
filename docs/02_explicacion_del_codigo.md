@@ -198,7 +198,7 @@ inhibidores conocidos de la diana nueva es todo lo que necesita el resto del pip
 A9 = 2‑hidroxi‑N‑fenetilbenzamida; A22 = 2‑amino‑N‑fenetilbenzamida. Difieren en **un
 átomo** (–OH frente a –NH₂) y los dos se unen al bolsillo CPSF30 de NS1 de influenza
 (Kleinpeter et al. 2018). Con la reducción ErG sus grafos resultan **idénticos**, porque
-–OH y –NH₂ son los dos donadores: en Fase A, por tanto, **las dos referencias aportan la
+–OH y –NH₂ son los dos donadores: sobre influenza, por tanto, **las dos referencias aportan la
 misma información al método**. Es un dato que hay que declarar en la tesis.
 
 `INFLUENZA_BENCHMARK_NSC` / `INFLUENZA_IC50_UM`: cuatro compuestos de Basu et al. (2009)
@@ -240,7 +240,7 @@ Por qué importa: con decoys demasiado fáciles (moléculas enormes o diminutas)
 método da AUC alto y la validación no vale nada; con decoys demasiado parecidos se están
 etiquetando como inactivas moléculas que probablemente serían activas.
 
-**Limitación:** son inactivos **presuntos**, nunca medidos. En la Fase A se reemplazaron
+**Limitación:** son inactivos **presuntos**, nunca medidos. En este trabajo se reemplazaron
 por los inactivos **confirmados** de AID 2326, mucho más sólido. Esta función queda para
 el caso de una diana sin cribado disponible — que es exactamente la situación del dengue.
 

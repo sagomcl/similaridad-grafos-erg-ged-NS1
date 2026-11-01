@@ -33,7 +33,7 @@ MI_DIANA_ACTIVOS = {
 }
 ```
 
-**Reglas que hay que respetar**, y que son el resultado principal de la Fase A:
+**Reglas que hay que respetar**, y que son el resultado principal del trabajo sobre influenza:
 
 - **Un ranking por referencia, nunca promediado.** Si los inhibidores conocidos no
   comparten farmacóforo, promediar la similitud sobre todos ellos destruye la señal (es
@@ -81,7 +81,7 @@ tres columnas: identificador, SMILES y desenlace (`Active` / `Inactive`).
 
 ### Si **no** existe cribado etiquetado (el caso del dengue)
 
-Es la situación de la Fase B y hay que decirlo con claridad en cualquier informe: **sin
+Es la situación de una extrapolación a dengue y hay que decirlo con claridad en cualquier informe: **sin
 conjunto etiquetado no se puede medir generalización**. Las opciones, de mejor a peor:
 
 1. **Transferir θ de una diana homóloga** calibrada con datos reales. Es lo que propone
@@ -203,7 +203,7 @@ que conviene **fijarlo, declararlo y no ajustarlo mirando el resultado**.
 
 ---
 
-## Caso concreto: pasar de NS1 de influenza a NS1 de dengue (Fase B)
+## Caso concreto: pasar de NS1 de influenza a NS1 de dengue
 
 Lo que ya está hecho y lo que falta:
 
@@ -244,7 +244,7 @@ DENGUE_ACTIVOS = {
      **un solo nodo aromático**, así que su extensión espacial —su rasgo más
      característico— no queda representada.
 
-   Si la Fase B va en serio, vale la pena probar una variante de `build_erg` que divida
+   Si la extrapolación a dengue va en serio, vale la pena probar una variante de `build_erg` que divida
    los sistemas policíclicos en un nodo por anillo en vez de colapsarlos por contigüidad
    de tipo.
 
@@ -255,7 +255,7 @@ DENGUE_ACTIVOS = {
 4. **Criterios geométricos**: los de CPSF30 **no aplican**, y está verificado:
    **ninguno** de los tres inhibidores de dengue pasa el criterio de composición
    (berberina no tiene ningún HBD; los triterpenos no tienen ningún nodo aromático).
-   Aplicar el filtro descartaría a los propios compuestos de referencia. Correr la Fase B
+   Aplicar el filtro descartaría a los propios compuestos de referencia. Correr el método
    **sin filtro geométrico** y decirlo, o derivar criterios nuevos de la estructura de
    NS1 de dengue si se dispone de ella.
 
@@ -268,7 +268,7 @@ DENGUE_ACTIVOS = {
 6. **Cómo hay que presentar el resultado.** Un ranking priorizado de "primos químicos"
    de cada inhibidor conocido de dengue, útil como **prefiltro previo al docking o al
    ensayo experimental**, no como predicción de actividad. Esa es la afirmación que la
-   evidencia de la Fase A permite sostener, y no más.
+   evidencia obtenida sobre influenza permite sostener, y no más.
 
 ---
 

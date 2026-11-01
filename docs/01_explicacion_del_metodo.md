@@ -420,7 +420,7 @@ no sirven.
 
 ### El hallazgo metodológico central del proyecto
 
-Esta parte es el resultado más importante de la Fase A, y conviene contarla como
+Esta parte es el resultado más importante del trabajo, y conviene contarla como
 sucedió:
 
 - Calibrando **solo contra A9 y A22** (n = 2 activos), el AUC de calibración fue

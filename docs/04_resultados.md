@@ -72,7 +72,7 @@ el mismo tipo de nodo (donador de puente de hidrógeno). La representación acer
 moléculas se unen al mismo sitio. Un fingerprint de Morgan sí los distingue (0,706),
 porque distingue algo que a la proteína le da igual.
 
-**Consecuencia metodológica:** en Fase A las dos referencias aportan al método la misma
+**Consecuencia metodológica:** sobre influenza las dos referencias aportan al método la misma
 información. No son dos validaciones independientes.
 
 Propiedades fisicoquímicas de las dos referencias:
@@ -389,7 +389,7 @@ Todas verificadas con los datos de este repositorio:
    conformeros y no entre al filtro por defecto.
 7. **El filtro geométrico de NS1 no aportó.** AUC 0,30–0,63; pasa el filtro un 0–50 % de
    los activos y un 20–45 % de los inactivos.
-8. **Las dos referencias de Fase A son una sola para el método**, porque sus grafos ErG
+8. **Las dos referencias son una sola para el método**, porque sus grafos ErG
    son idénticos. La validación con `n = 2` referencias es, en realidad, con una.
 9. **Pocos activos en cada experimento** (5 a 36 en prueba): los intervalos de confianza
    del 95 % son anchos y se solapan entre métodos.

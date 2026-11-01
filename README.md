@@ -24,12 +24,12 @@ inhibidores conocidos no hay con qué entrenar ni validar un método computacion
 
 **Estrategia de dos fases:**
 
-- **Fase A (este repositorio).** Validar el método sobre la **NS1 de influenza**, una
+- **Lo que hace este repositorio.** Desarrollar, poner a prueba y aplicar el método sobre la **NS1 de influenza**, una
   proteína homóloga para la que sí existen inhibidores caracterizados (A9 y A22,
   Kleinpeter et al. 2018) y un cribado experimental público de 270 315 compuestos con
   1 073 activos confirmados (PubChem AID 2326). Ahí se puede medir honestamente si el
   método discrimina.
-- **Fase B (pendiente).** Aplicar el método ya calibrado a NS1 de dengue, con los pocos
+- **Extrapolación pendiente.** Aplicar el método ya calibrado a NS1 de dengue, con los pocos
   inhibidores confirmados que existen.
 
 El método es **extrapolable**: cambiar de diana requiere cambiar las moléculas de
@@ -229,7 +229,7 @@ Resumen; la receta completa, con ejemplos, está en
 | 4 | Tipos de nodo (p. ej. cargas) | `LABEL_MAP`, `PRIORITY`, `TYPES`, `_cost_matrix` | solo si hace falta |
 | 5 | Rango de conexión / umbral de quimiotipo | `build_erg` (`1<=d<=6`), `clusterizar_activos` | casos especiales |
 
-**Dos reglas que la Fase A dejó claras y que hay que respetar al extrapolar:**
+**Dos reglas que el trabajo sobre influenza dejó claras y que hay que respetar al extrapolar:**
 
 - Un ranking **por cada** inhibidor de referencia, nunca promediado entre varios.
 - Declarar siempre de dónde salió θ: calibrado con datos de esa diana, transferido de
@@ -245,7 +245,7 @@ Resumen; la receta completa, con ejemplos, está en
 | Compuestos con IC50 de influenza | Basu et al. 2009, *J. Virol.*, DOI 10.1128/JVI.01805-08 |
 | Conjunto etiquetado de validación | [PubChem BioAssay AID 2326](https://pubchem.ncbi.nlm.nih.gov/bioassay/2326) — NIH Chemical Genomics Center |
 | Biblioteca de candidatos | ChEMBL (descarga de 33 047 compuestos) |
-| Inhibidores de NS1 de dengue (Fase B) | Ansari et al. 2025, *Molecular Diversity*, DOI 10.1007/s11030-025-11447-5 |
+| Inhibidores de NS1 de dengue (extrapolación prevista) | Ansari et al. 2025, *Molecular Diversity*, DOI 10.1007/s11030-025-11447-5 |
 
 ## Métodos y algoritmos
 
