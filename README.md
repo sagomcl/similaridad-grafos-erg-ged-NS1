@@ -22,15 +22,23 @@ mínimo — un puñado de compuestos.
 Esa escasez de datos es, a la vez, el problema y el obstáculo para resolverlo: sin
 inhibidores conocidos no hay con qué entrenar ni validar un método computacional.
 
-**Estrategia de dos fases:**
+**Blanco de interés y banco de prueba:**
 
-- **Lo que hace este repositorio.** Desarrollar, poner a prueba y aplicar el método sobre la **NS1 de influenza**, una
-  proteína homóloga para la que sí existen inhibidores caracterizados (A9 y A22,
-  Kleinpeter et al. 2018) y un cribado experimental público de 270 315 compuestos con
-  1 073 activos confirmados (PubChem AID 2326). Ahí se puede medir honestamente si el
-  método discrimina.
-- **Extrapolación pendiente.** Aplicar el método ya calibrado a NS1 de dengue, con los pocos
-  inhibidores confirmados que existen.
+- **El blanco de interés es la NS1 del dengue.** Es el problema que motiva el trabajo. No
+  se puede evaluar un método ahí: con dos o tres inhibidores conocidos, cualquier
+  procedimiento se ajusta hasta parecer perfecto sin capacidad real de generalizar.
+- **El banco de prueba es la NS1 de influenza**, y es lo que hace este repositorio. Tiene
+  inhibidores caracterizados estructuralmente (A9 y A22, Kleinpeter et al. 2018) y un
+  cribado experimental público de 270 315 compuestos con 1 073 activos confirmados
+  (PubChem AID 2326). Ahí sí se puede medir honestamente si el método discrimina y cuánto
+  cuesta ejecutarlo.
+
+Importante: las dos proteínas **no son homólogas**. Comparten el nombre (ambas son la
+primera proteína no estructural de su genoma) y una función general de antagonismo
+inmunitario, pero el dengue es un flavivirus y la influenza un ortomixovirus, sin origen
+evolutivo ni arquitectura común. Lo que se traslada al dengue es **el procedimiento**, no
+las moléculas que aquí resultan priorizadas: un análogo de A9 no tiene por qué unirse a la
+NS1 del dengue.
 
 El método es **extrapolable**: cambiar de diana requiere cambiar las moléculas de
 referencia, recalibrar seis pesos y ajustar los criterios geométricos del bolsillo. Todo
