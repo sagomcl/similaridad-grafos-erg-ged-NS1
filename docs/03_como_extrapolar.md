@@ -216,19 +216,48 @@ DENGUE_ACTIVOS = {
 }
 ```
 
-2. **Un ranking por cada uno, por separado.** Son tres quimiotipos distintos (un
-   alcaloide y dos triterpenos): promediarlos reproduciría exactamente el error que la
-   Fase A documentó. Esperar tres listas de candidatos muy diferentes entre sí, y
-   presentarlas como tres listas.
+2. **Un ranking por cada uno, por separado** — pero en rigor son **dos**, no tres.
+   Aplicando la comprobación del paso 1 (`comparar_*.py` adaptado) se obtiene:
+
+   | Compuesto | Átomos pesados | Nodos | Aristas | Composición |
+   |---|---|---|---|---|
+   | Berberina | 25 | 6 | 10 | 4 HBA, 1 aromático, 1 hidrofóbico |
+   | Ácido betulínico | 33 | 4 | 4 | 2 HBD, 1 HBA, 1 hidrofóbico |
+   | Ácido ursólico | 33 | 4 | 4 | 2 HBD, 1 HBA, 1 hidrofóbico |
+
+   | Par | ErG+GED | Tanimoto |
+   |---|---|---|
+   | Berberina – ác. betulínico | 0,689 | 0,044 |
+   | Berberina – ác. ursólico | 0,689 | 0,043 |
+   | Ác. betulínico – ác. ursólico | **1,000** | 0,429 |
+
+   Los dos triterpenos dan **grafos ErG idénticos**: misma fórmula, misma composición
+   farmacofórica, mismos nodos y aristas. Para el método son la misma molécula y
+   producirán la misma lista. Presentar dos rankings (berberina y "triterpeno"), no tres.
+
+   Dos consecuencias más de la reducción en estos compuestos, que conviene declarar:
+   - Los triterpenos pasan de 33 átomos a **4 nodos** (compresión de 8 a 1, frente a 3 a 1
+     en A9/A22): todo el esqueleto pentacíclico, al no ser aromático, es hidrofóbico
+     contiguo y se colapsa en un solo nodo. El método **no puede distinguir dos
+     triterpenos pentacíclicos cualesquiera**.
+   - En berberina pasa lo inverso: su sistema policíclico aromático condensado se vuelve
+     **un solo nodo aromático**, así que su extensión espacial —su rasgo más
+     característico— no queda representada.
+
+   Si la Fase B va en serio, vale la pena probar una variante de `build_erg` que divida
+   los sistemas policíclicos en un nodo por anillo en vez de colapsarlos por contigüidad
+   de tipo.
 
 3. **θ transferido de influenza**, declarándolo como supuesto. No hay cribado masivo
    etiquetado para NS1 de dengue, así que no se puede recalibrar ni medir
    generalización.
 
-4. **Criterios geométricos**: los de CPSF30 **no aplican**. El bolsillo de dengue donde
-   actúan berberina y los triterpenos no está caracterizado con el mismo detalle. Lo
-   razonable es correr la Fase B **sin filtro geométrico** y decirlo, o derivar criterios
-   nuevos de la estructura de NS1 de dengue si se dispone de ella.
+4. **Criterios geométricos**: los de CPSF30 **no aplican**, y está verificado:
+   **ninguno** de los tres inhibidores de dengue pasa el criterio de composición
+   (berberina no tiene ningún HBD; los triterpenos no tienen ningún nodo aromático).
+   Aplicar el filtro descartaría a los propios compuestos de referencia. Correr la Fase B
+   **sin filtro geométrico** y decirlo, o derivar criterios nuevos de la estructura de
+   NS1 de dengue si se dispone de ella.
 
 5. **Comando:**
    ```bash
