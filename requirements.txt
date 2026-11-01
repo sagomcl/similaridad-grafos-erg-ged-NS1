@@ -15,3 +15,11 @@ pandas>=2.0            # tablas de resultados
 networkx>=3.0          # estructura de datos del grafo ErG
 matplotlib>=3.7        # curvas ROC y mapas de calor
 openpyxl>=3.1          # lectura de los .xlsx de entrada
+
+# ---------------------------------------------------------------------------
+# Entorno verificado (una corrida completa reprodujo los puntajes reportados
+# en docs/04_resultados.md con estas versiones exactas):
+#   Python 3.13.2 | rdkit 2025.03.6 | numpy 2.2.2  | scipy 1.18.1
+#   scikit-learn 1.9.1 | pandas 2.2.3 | networkx 3.5 | matplotlib 3.10.0
+#   openpyxl 3.1.5
+# ---------------------------------------------------------------------------

@@ -157,9 +157,36 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Python 3.10–3.12. La dependencia principal es **RDKit** (código abierto), que trae el
+Python 3.10–3.13. La dependencia principal es **RDKit** (código abierto), que trae el
 catálogo de definiciones farmacofóricas (`BaseFeatures.fdef`) sobre el que se construyen
 los grafos.
+
+### Con conda
+
+```bash
+conda create -n erg-ns1 -c conda-forge python=3.13 rdkit
+conda activate erg-ns1
+pip install scipy scikit-learn pandas networkx matplotlib openpyxl
+```
+
+### Entorno verificado
+
+Los resultados de [`docs/04_resultados.md`](docs/04_resultados.md) se reprodujeron con
+Python 3.13.2, rdkit 2025.03.6, numpy 2.2.2, scipy 1.18.1, scikit-learn 1.9.1,
+pandas 2.2.3, networkx 3.5, matplotlib 3.10.0 y openpyxl 3.1.5.
+
+Comprobación rápida de que el entorno funciona: los dos inhibidores de referencia deben
+dar similaridad exactamente 1,000, porque sus grafos ErG son idénticos.
+
+```python
+import ged_mejorado, json
+ged_mejorado.parchear()
+from pipeline_final_completo import INFLUENZA_ACTIVOS, smiles_to_3d_mol, build_erg
+
+theta = json.load(open("resultados/theta_final_v2.json"))["theta"]
+G = {k: build_erg(smiles_to_3d_mol(s)[0]) for k, s in INFLUENZA_ACTIVOS.items()}
+print(ged_mejorado.ged_similarity_v2(G["A9"], G["A22"], theta))   # -> 1.0
+```
 
 ---
 
