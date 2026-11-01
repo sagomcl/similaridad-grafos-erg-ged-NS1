@@ -1,0 +1,15 @@
+{
+  "theta": {
+    "w_aromatico_hidrofobo": 1.892829537917692,
+    "w_hba_hbd": 0.8006379615726711,
+    "w_polar_apolar": 0.42106917946776434,
+    "node_indel": 0.6695175175262291,
+    "edge_beta": 1.4693747561631934,
+    "edge_indel": 0.46480412656677295
+  },
+  "auc_train": 0.9017857142857143,
+  "auc_test": 0.8645833333333334,
+  "n_train_act": 28,
+  "n_test_act": 20,
+  "nota": "calibrado con ged_mejorado (emparejamiento que considera aristas)"
+}

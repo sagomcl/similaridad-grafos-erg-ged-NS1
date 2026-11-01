@@ -1,0 +1,14 @@
+{
+  "theta": {
+    "w_aromatico_hidrofobo": 0.24444352587379714,
+    "w_hba_hbd": 1.6678718223481095,
+    "w_polar_apolar": 1.754064180738045,
+    "node_indel": 2.3177445211436343,
+    "edge_beta": 1.16586076974651,
+    "edge_indel": 0.7140901626894081
+  },
+  "auc_train": 0.9500000000000001,
+  "auc_test": 0.6500000000000001,
+  "n_train_act": 20,
+  "n_test_act": 12
+}

@@ -1,0 +1,73 @@
+==============================================================================
+PARTE 1 — A9 vs A22
+==============================================================================
+
+Similitud ErG+GED (theta calibrado): 0.427
+Similitud ErG+GED (theta por defecto, sin calibrar): 0.819
+Similitud Morgan+Tanimoto: 0.706
+
+--- Como se emparejan los grafos ErG (theta calibrado) ---
+  Nodos A9: 6   |   Nodos A22: 6   |   Aristas A9: 14   Aristas A22: 14
+  Emparejamiento de nodos (grupos farmacoforicos):
+    A9:HBD[N]                 <-> A22:HBD[N]                 (igual tipo)
+    A9:HBD[O]                 <-> A22:HBD[N]                 (igual tipo)
+    A9:HBA[O]                 <-> A22:HBA[O]                 (igual tipo)
+    A9:Aromatico[CCCCCC]      <-> A22:Aromatico[CCCCCC]      (igual tipo)
+    A9:Aromatico[CCCCCC]      <-> A22:Aromatico[CCCCCC]      (igual tipo)
+    A9:Hidrofobo[C]           <-> A22:Hidrofobo[C]           (igual tipo)
+  Diferencias de distancia (en enlaces) entre pares de grupos emparejados:
+    HBD[N]-HBA[O]: A9=2 enlaces vs A22=4  (dif 2)
+    HBD[N]-Aromatico[CCCCCC]: A9=3 enlaces vs A22=1  (dif 2)
+    HBD[N]-Aromatico[CCCCCC]: existe en A9 (2) pero no en A22
+    HBD[N]-Hidrofobo[C]: A9=2 enlaces vs A22=6  (dif 4)
+    HBD[O]-HBA[O]: A9=4 enlaces vs A22=2  (dif 2)
+    HBD[O]-Aromatico[CCCCCC]: A9=1 enlaces vs A22=3  (dif 2)
+    HBD[O]-Hidrofobo[C]: A9=6 enlaces vs A22=2  (dif 4)
+    HBA[O]-Aromatico[CCCCCC]: A9=5 enlaces vs A22=2  (dif 3)
+    HBA[O]-Aromatico[CCCCCC]: A9=2 enlaces vs A22=5  (dif 3)
+    Aromatico[CCCCCC]-Hidrofobo[C]: A9=1 enlaces vs A22=4  (dif 3)
+    Aromatico[CCCCCC]-Hidrofobo[C]: A9=4 enlaces vs A22=1  (dif 3)
+    arista HBD[N]-Aromatico[CCCCCC] solo existe en A22
+  -> 10 pares con distancia distinta (suma de diferencias = 28 enlaces)
+
+--- Subestructura comun maxima (MCS) ---
+  Atomos en comun: 17 de 18 (A9) y 18 (A22)  |  SMARTS: [#8]=[#6](-[#7]-[#6]-[#6]-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1)-[#6]1:[#6]:[#6]:[#6]:[#6]:[#6]:1
+  Atomos de A9 fuera de la subestructura comun: O17
+  Atomos de A22 fuera de la subestructura comun: N0
+
+--- Propiedades fisicoquimicas ---
+                      A9     A22
+MW                241.29  240.31
+logP                2.36    2.24
+HBD                 2.00    2.00
+HBA                 2.00    2.00
+TPSA               49.33   55.12
+Enlaces rotables    4.00    4.00
+
+==============================================================================
+PARTE 2 — top-20 de A9 vs top-20 de A22
+==============================================================================
+Moleculas procesadas: top A9 = 20, top A22 = 20
+Moleculas en comun entre ambos top-20: 0 
+
+Similitud entre las listas (0 a 1):
+                                    ErG+GED  Tanimoto
+cruzada A9-list x A22-list (media)    0.458     0.162
+cruzada (maximo)                      0.689     0.455
+interna lista A9 (media)              0.740     0.246
+interna lista A22 (media)             0.659     0.187
+
+Similitud media de cada lista contra A9 y A22:
+                ErG+GED  Tanimoto
+top A9 vs A9      0.843     0.314
+top A9 vs A22     0.446     0.281
+top A22 vs A22    0.773     0.207
+top A22 vs A9     0.437     0.210
+
+Correlacion (Spearman) entre ErG+GED y Tanimoto en los 400 pares cruzados: 0.006
+Par cruzado mas parecido segun ErG+GED: CHEMBL1999137 (top A9) vs CHEMBL1438609 (top A22) = 0.689
+Par cruzado mas parecido segun Tanimoto: CHEMBL1586605 (top A9) vs CHEMBL1583377 (top A22) = 0.455
+
+Lectura: si la similitud cruzada es mucho menor que la interna de cada lista, los dos top-20
+son vecindarios quimicos distintos. Si la cruzada es parecida a la interna, las listas no se
+diferencian tanto como sugiere el 0/20 de moleculas en comun.

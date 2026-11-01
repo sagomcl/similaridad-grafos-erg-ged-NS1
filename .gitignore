@@ -1,0 +1,57 @@
+# ---------------------------------------------------------------------------
+# Datos de entrada: no van al repositorio por tamano (mas de 60 MB en total).
+# Ver data/README.md para saber como obtener cada archivo.
+# ---------------------------------------------------------------------------
+Moleculas.xlsx
+BasePubChem.xlsx
+AID2326_cache.csv
+AID_2326_datatable.csv
+merged_500_con_props.csv
+activos_clusters.pkl
+AID2326_activos_reales.csv
+AID2326_inactivos_muestra5000.csv
+data/*.xlsx
+data/*.csv
+
+# ---------------------------------------------------------------------------
+# Salidas grandes y reproducibles (los rankings completos pesan ~3 MB cada uno).
+# Los resultados chicos que si se versionan estan en resultados/.
+# ---------------------------------------------------------------------------
+ranking_33k_*.csv
+ranking_33k_*_checkpoint.json
+ranking_33k_checkpoint*.json
+cribado_ns1.csv
+viz_A9.json
+top20_estructuras*.png
+top20_tabla*.csv
+influenza_roc.png
+influenza_scores.csv
+influenza_theta.json
+pubchem_test_scores.csv
+pubchem_theta_calibrado.json
+cluster*_resultado.json
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Entorno y sistema
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+poetry.lock
+
+# Excepcion: el registro de moleculas descartadas SI se versiona (pesa 4 KB y
+# se cita en el anexo de la tesis como evidencia del conteo exacto de 33 013).
+!resultados/*_errores.csv

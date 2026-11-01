@@ -1,0 +1,92 @@
+{
+  "mezclado_azar": {
+    "theta": {
+      "w_aromatico_hidrofobo": 1.9884771655601372,
+      "w_hba_hbd": 0.18814542267238688,
+      "w_polar_apolar": 0.3021147128956052,
+      "node_indel": 0.5131020887387905,
+      "edge_beta": 1.4716236834462935,
+      "edge_indel": 0.6946062957973032
+    },
+    "auc_train": 0.6626984126984127,
+    "auc_test": 0.4791666666666667,
+    "n_train_act": 21,
+    "n_train_dec": 36,
+    "n_test_act": 14,
+    "n_test_dec": 24,
+    "auc_test_tanimoto": 0.5625,
+    "minutos": 19.4
+  },
+  "cluster_1": {
+    "theta": {
+      "w_aromatico_hidrofobo": 2.2235730234763706,
+      "w_hba_hbd": 1.1974656503811048,
+      "w_polar_apolar": 2.4196822239089166,
+      "node_indel": 2.5476886919996393,
+      "edge_beta": 0.8388059369574151,
+      "edge_indel": 0.15785529518633656
+    },
+    "auc_train": 1.0,
+    "auc_test": 0.984375,
+    "n_train_act": 12,
+    "n_train_dec": 36,
+    "n_test_act": 8,
+    "n_test_dec": 24,
+    "auc_test_tanimoto": 1.0,
+    "minutos": 11.1
+  },
+  "cluster_2": {
+    "theta": {
+      "w_aromatico_hidrofobo": 0.7167848675893067,
+      "w_hba_hbd": 0.4120447541256145,
+      "w_polar_apolar": 2.558238846044369,
+      "node_indel": 1.515445811953503,
+      "edge_beta": 1.4829530168983232,
+      "edge_indel": 1.2540289552929065
+    },
+    "auc_train": 1.0,
+    "auc_test": 0.9107142857142857,
+    "n_train_act": 9,
+    "n_train_dec": 36,
+    "n_test_act": 7,
+    "n_test_dec": 24,
+    "auc_test_tanimoto": 1.0,
+    "minutos": 3.4
+  },
+  "cluster_3": {
+    "theta": {
+      "w_aromatico_hidrofobo": 1.5119647116672768,
+      "w_hba_hbd": 2.4592241362495133,
+      "w_polar_apolar": 1.0881262325606498,
+      "node_indel": 1.3998557930119386,
+      "edge_beta": 1.0879262453121854,
+      "edge_indel": 0.8650364699234432
+    },
+    "auc_train": 0.9722222222222223,
+    "auc_test": 0.875,
+    "n_train_act": 7,
+    "n_train_dec": 36,
+    "n_test_act": 5,
+    "n_test_dec": 24,
+    "auc_test_tanimoto": 1.0,
+    "minutos": 43.3
+  },
+  "3_clusters_juntos": {
+    "theta": {
+      "w_aromatico_hidrofobo": 1.892829537917692,
+      "w_hba_hbd": 0.8006379615726711,
+      "w_polar_apolar": 0.42106917946776434,
+      "node_indel": 0.6695175175262291,
+      "edge_beta": 1.4693747561631934,
+      "edge_indel": 0.46480412656677295
+    },
+    "auc_train": 0.9017857142857143,
+    "auc_test": 0.8645833333333334,
+    "n_train_act": 28,
+    "n_train_dec": 36,
+    "n_test_act": 20,
+    "n_test_dec": 24,
+    "auc_test_tanimoto": 1.0,
+    "minutos": 35.5
+  }
+}
