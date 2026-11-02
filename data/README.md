@@ -9,7 +9,6 @@ Por defecto los scripts buscan los archivos **en la raíz del repositorio** (jun
 que ajustar las rutas `EXCEL` en `correr_ranking.py` y la ruta de `BasePubChem.xlsx` en
 `recalibrar_v2.py`.
 
----
 
 ## 1. `Moleculas.xlsx` — biblioteca de candidatos (≈ 10 MB)
 
@@ -69,7 +68,7 @@ metadatos debajo del encabezado, y `cargar_pubchem_ns1_assay` las salta con
 ese salto borraría cuatro moléculas reales. `pipeline_v3.py` filtra por contenido en vez
 de por posición, que es lo correcto.
 
----
+
 
 ## 3. Archivos intermedios de los scripts históricos (no necesarios)
 
